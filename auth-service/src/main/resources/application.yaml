@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: auth-service
+  datasource:
+    url: ${AUTH_DB_URL}
+    username: ${AUTH_DB_USERNAME}
+    password: ${AUTH_DB_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+jwt:
+  secret: ${JWT_SECRET}
+  expiration: ${JWT_EXPIRATION}
+server:
+  port: 8081
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
